@@ -1,3 +1,10 @@
+# Václav Osladil
+# Tests performing exactly the way code is written in Playwright inspector Step over (F10) function
+# Tests 3, 4 are compromised in Playwright inspector Resume (F8) function, job search page does not filter city
+# Test 4, it was observed that the job detail page redirects from the jobs.cz website
+# to the employer's company website
+# Im not able to solve this behavior in Resume (F8) function without further experience
+
 from playwright.sync_api import sync_playwright
 
 
@@ -280,9 +287,3 @@ def test_invalid_login():
 
 if __name__ == "__main__":
     pytest.main(["-v", "-s", __file__])
-
-# Tests performing exactly the way code is written in Playwright inspector Step over (F10) function
-# Tests 3, 4 are compromised in Playwright inspector Resume (F8) function, job search page does not filter city
-# Test 4, it was observed that the job detail page redirects from the jobs.cz website
-# to the employer's company website
-# Im not able to solve this behavior in Resume (F8) function without further experience
